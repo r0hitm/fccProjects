@@ -1,0 +1,255 @@
+/*
+ - Styles for Portfolio** Page
+ - Author: R Mehta (@oss-su)
+
+ **Listing the projects I made in the starting
+    web development via freecodecamp!
+*/
+
+:root {
+    /* color pallete */
+    --bg-color: #162447;
+    --bg-light-color: #1f4068;
+    --bg-dark-color: #1b1b2f;
+    --contrast-color: #e43f5a;
+    --main-white: #fff;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* typography */
+body {
+    font-family: 'Itim', cursive;
+    color: var(--main-white);
+    margin: 0;
+}
+
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: 'Freckle Face', cursive;
+    z-index: 10;
+    font-size: 1.7rem;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: var(--main-white);
+    height: 100%;
+}
+
+.nav-links:hover {
+    background-color: #3468a7;
+}
+
+#navbar .h-listing {
+    margin: 0;
+}
+
+.h-listing {
+    list-style-type: none;
+    display: flex;
+}
+
+.h-listing a {
+    display: block;
+    padding: 1rem;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome-section > h1 {
+    font-size: 6rem;
+    margin: 0;
+}
+
+#welcome-section > p {
+    font-size: 3rem;
+    margin: 0;
+    font-style: italic;
+    color: var(--contrast-color);
+}
+
+#projects {
+    padding: 6rem 2rem;
+    text-align: center;
+    /* need more work here */
+    width: 100%;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2.8rem;
+    margin: 10x;
+    padding: 0;
+    border-bottom: 1px solid cyan;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;    
+}
+
+.profile-links {
+    text-decoration: none;
+    color: gray;
+    text-shadow: 2px 1px red, 0px 1px yellow, -1px 0px darkblue;
+    display: inline-block;
+    font-size: 1.8rem;
+    padding: 1.2rem;
+}
+
+.profile-links > img {
+    width: 1.8rem;
+}
+
+.profile-links:hover {
+    transform: translateY(10px);
+}
+
+/* graphics */
+body {
+    background: linear-gradient(0deg, var(--bg-color), var(--contrast-color));
+}
+
+#navbar {
+    background-color: var(--contrast-color);
+}
+
+#welcome-section {
+    background: linear-gradient(65deg, var(--bg-dark-color), var(--bg-light-color));
+}
+
+#projects {
+    background-color: var(--bg-light-color);
+}
+
+footer {
+    background: linear-gradient(180deg, var(--bg-light-color), var(--contrast-color));
+    position: absolute;
+    width: 100%;
+    border-top: 2px dotted white;
+    
+    text-shadow: 1px 1px black;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* project section grid layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;    
+    align-items: self-start;
+}
+
+.project-image {
+    width: 100%;
+    object-fit: fill;
+}
+
+.project {
+    background-color: var(--bg-dark-color);
+}
+
+.project:hover {
+    animation-name: shadow;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+}
+
+.project-title {
+    text-decoration: none;
+    color: var(--main-white);
+
+    font-size: 1.2rem;
+    font-family: "Freckle Face", cursive;
+}
+
+.project-title span {
+    opacity: 0;
+    color:var(--contrast-color);
+}
+
+.project-title:hover span {
+    animation-name: quote;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes quote {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0 0 black;
+    }
+    50% {
+        box-shadow: 4px 4px black;
+    }
+    100% {
+        box-shadow: 8px 8px black;
+    }
+}
+
+/* for smaller devices */
+@media screen and (max-width: 480px) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #welcome-section {
+        height: 100%;
+    }
+   
+    .h-listing {
+        list-style-type: none;
+        display: block;
+    }
+    
+    .h-listing a {
+        display: initial;
+        padding: 0;
+    }
+    
+    a.profile-links {
+        display: block;
+        padding: 1rem;
+    }
+    
+}

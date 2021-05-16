@@ -1,0 +1,289 @@
+/* Styles for fcc_product-landing-page.html */
+/* Author: R Mehta */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    margin:0;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+    left: 0;
+	width: 100%;
+	display: flex;
+    justify-content: space-between;
+    background-color: #21a13be3;
+    color: red;
+}
+
+#header-img {
+    margin: 5px;
+    height: 4em;
+}
+
+.logo {
+    width: 50%;
+    color: red;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 30pt;
+    font-weight: bold;
+    position: relative;
+    bottom: 30%;
+    text-shadow: 3px 1px aquamarine, 5px 2px greenyellow;
+}
+
+#form-wrap {   
+	margin: auto;
+    margin-top: 8em;
+    width: max-content;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#email {
+    text-align: center;
+    margin: 10px auto;
+    width: 60%;
+    height: 30pt;
+}
+
+#submit {
+    margin:auto;
+    background-color: yellow;
+    border: 1px solid darkgoldenrod;
+    border-radius: 3px;
+    font-weight: bold;
+    width: 50%;
+    height: 30px;
+}
+
+#nav-bar {
+    width: 40%;
+}  
+
+#nav-bar ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.nav-link {
+    text-decoration: none;
+    font:bold 14pt 'sans-serif';
+}
+
+#page-content {
+    margin: 0.5em 1em 1em 1em;
+    background-color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+.category {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bubble {
+    margin-top: 30px;
+    width: calc(100%/3);
+    border: 1px solid #bcffbc;
+    border-radius: 10px;
+    background-color: #70ed70c2;
+    color: #eee;
+    font-size: 16pt;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-shadow: 3px 0px 0.4em brown, 2px -2px gold;
+}
+
+.bubble img {
+    width: 60%;
+    max-width: 80%;
+}
+
+#video {
+    margin: 100px 40px 40px 0;
+    width: 50%;
+}
+
+.product {
+    margin-top: 60px;
+    display: flex;
+    font-family: sans;
+}
+
+.product-item {
+    margin: 10px;
+    width: calc(100% / 3);
+    border: 1px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 50px;
+}
+
+h2:first-child {
+    margin-top: 0;
+    padding: 3px;
+    background-color: seagreen;
+    color:orangered;
+    text-shadow: 0px 0px 3px palegoldenrod,0 0 2px white;
+}
+
+#shop-now {
+    margin-top: 2em;
+}
+
+#shop-now a {
+    text-decoration: none;
+    background-color: yellow;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+footer {
+    padding: 10px;
+    margin-top: 3em;
+    margin-bottom: 0px;
+    background-color: #21a13be3;
+}
+
+footer a {
+    text-decoration: underline;
+    color: #ddd;
+}
+
+/* mobile screens */
+@media screen and (max-width: 512px) {
+    #header {
+        display: flex;
+        flex-direction: column;
+        background-color: #21a13be3;
+        color: red;
+    }
+    
+    .logo {
+        width: 100%;
+        color: red;
+    }
+    
+    #form-wrap {   
+        margin: auto;
+        margin-top: 15em;
+        width: 90%;
+    }
+    
+    #email {
+        text-align: center;
+        margin: 10px auto;
+        width: 100%;
+    }
+    
+    #nav-bar {
+        width: 100%;
+    }  
+    
+    #nav-bar ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .nav-link {
+        text-decoration: none;
+        font:bold 13pt 'sans-serif';
+    }
+    
+    #page-content {
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: white;
+        padding: 1em;
+        text-align: center;
+        
+    }
+    
+    .category {
+        margin: auto;
+        width: 100%;
+        display: block;
+    }
+    
+    .bubble {
+        margin: 20px auto;
+        width: 100%;
+    }
+    
+    .bubble img {
+        width: 50vmin;
+    }
+    
+    #video {
+        margin-top: 80px;
+        width: 100%;
+    }
+    
+    .product {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        font-family: sans;
+    }
+    
+    .product-item {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    h2:first-child {
+        background-color: seagreen;
+        color:orangered;
+        text-shadow: 0px 0px 3px palegoldenrod,0 0 2px white;
+    }
+    
+    #shop-now {
+        margin-top: 2em;
+    }
+    
+    #shop-now a {
+        text-decoration: none;
+        background-color: yellow;
+        padding: 0.5em;
+        border-radius: 5px;
+    }
+    
+    footer {
+        padding: 10px;
+        margin-top: 3em;
+        margin-bottom: 0px;
+        background-color: #21a13be3;
+    }
+    
+    footer a {
+        text-decoration: underline;
+        color: #ddd;
+    }
+}

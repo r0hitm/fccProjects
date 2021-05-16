@@ -1,0 +1,118 @@
+body {
+    background-color:rgba(63, 63, 104, 0.753);
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14pt;
+    color: rgb(105, 231, 179);
+}
+
+#title {
+    background-color: rgba(39, 39, 65, 0.753);
+    margin: 0 0 1px 0;
+    text-align: center;
+    width: 100%;
+    color:rgb(255, 166, 0);
+}
+
+#description {
+    text-align: center;
+}
+
+#survey-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(39, 39, 65, 0.753);
+    font-weight: bold;
+    padding: 25px;
+}
+
+
+#survey-form > * {
+    margin-top: 1em;
+}
+
+#checkbox {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    height: 2em;
+    max-width: 100%;
+}
+
+input[type=radio] {
+    height: 1em;
+    width: 5%;
+}
+
+input[type=checkbox] {
+    height: 1em;
+    width: 5%;
+}
+
+
+#dropdown {
+    width: 100%;
+}
+
+#submit {
+    height: 3em;
+    width: 80%;
+    border: 0;
+    border-radius: 1em;
+    color:wheat;
+    font-weight: bold;
+    background-color: rgba(68, 158, 68, 0.897);
+    font-family: monospace;
+}
+
+#submit:hover {
+    animation-name: button-dim;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes button-dim {
+    0% {
+        background-color: rgba(68, 158, 68, 0.897);
+    }
+    100% {
+        background-color: rgb(56, 236, 56);
+    }
+}
+
+/* styles for the mobile devices */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 16pt;
+    }
+
+    #survey-form {
+        width: 100%;
+        padding: 8px;
+    }
+    
+    input {
+        height: 2em;
+        width: 90%;
+    }
+    
+    input[type=radio] {
+        height: 1em;
+        width: 5%;
+    }
+    
+    input[type=checkbox] {
+        height: 1em;
+        width: 5%;
+    }
+    
+    #dropdown {
+        width: 100%;
+    }
+}

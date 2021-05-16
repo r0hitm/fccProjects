@@ -1,0 +1,110 @@
+/* Styles for Technical Documentation Page */
+
+/* Author: R Mehta (@oss-su) */
+
+body {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    background-color: #ddd;
+    font-size: 13pt;
+    font-family: sans-serif, inherit;
+    line-height: 1.2em;
+}
+
+header {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#mobile-nav {visibility: hidden;}
+
+#main-doc {
+        margin-left: 300px;
+        padding: 2em;
+    }
+
+#main-doc table {
+    width: 80%;
+    text-align:  justify;
+}
+
+ #navbar {
+        position: fixed;
+        left: 0;
+        border-top: 1px solid blueviolet;
+        border-bottom: 1px solid blueviolet;
+        border-radius: 5px;
+        width: 300px;
+        height: 100%;
+        overflow: scroll;
+}
+
+
+#navbar header {
+    text-align: center;
+    letter-spacing: 1pt;
+    font-size: 14pt;
+}
+
+#navbar ul {
+    max-width: 80%;
+    list-style-type: none;
+}
+
+#navbar ul li {
+    border-top: 1px solid gray;
+    line-height: 2em;
+}
+
+#navbar ul li:hover {
+    background-color: cornsilk;
+}
+
+
+a, a:visited {color:blueviolet; text-decoration: none;}
+
+code.block {
+    display: block;
+    background-color: #ccc;
+    overflow: scroll;
+    width:  95%;
+}
+
+code {
+    background-color: #ccc;
+}
+
+/* for mobile */
+@media screen and (max-width: 480px) {
+    body {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    #mobile-nav {
+        visibility: visible;
+        width: 100%;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        padding: 3px;
+        background-color: rosybrown;
+        text-shadow: 1px 1px black;
+    }
+    
+   #navbar {
+        position: relative;
+        width: 100%;
+       height: auto;
+    border-top: 1px solid blueviolet;
+    border-bottom: 1px solid blueviolet;
+    margin: 10px 0 10px 0;
+    border-radius: 5px;
+    padding-top: 2em;
+}
+    
+    #main-doc {
+     margin: 0;
+}
+    
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--freecode camp projuct landing page-->
+        <title>Green Corp</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="product-landing-page.css">
+    </head>
+
+    <body>
+        <header id="header">
+            <div class="logo">
+                <img id="header-img" src="img/logo.png" alt="company logo">
+                <h1>Green Corp</h1>
+            </div>
+            
+            <nav id="nav-bar">
+                <ul>
+                    <li><a class="nav-link" href="#features">Features</a></li>
+                    <li><a class="nav-link" href="#how-it-works">How it works</a></li>
+                    <li><a class="nav-link" href="#products">Products</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="form-wrap">
+            <h2>Choose the Products that heal the Earth</h2>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <input id="email" name="email" type="email" placeholder="Enter your Email Address">
+                <input id="submit" type="submit" value="Get Started">
+            </form>
+        </div>
+        <div id="page-content">
+            <!--the giant three bubbles. #features-->
+            <section class="category">
+                <a id="features"></a>
+                <figure class="bubble">
+                    <img src="img/quality.png">
+                    <figcaption>Quality Assured - Our Products meets global standard</figcaption>
+                </figure>
+                <figure class="bubble">
+                    <img src="img/delivery.png">
+                    <figcaption>Fast Delivery</figcaption>
+                </figure>
+                <figure class="bubble">
+                    <img src="img/rec.png">
+                    <figcaption>Made from 100% Recyled and reused materials which helps not just you but Earth too.</figcaption>
+                </figure>
+            </section>
+
+            <!--external video. #how-it-works-->
+            <section class="category">
+                <a id="how-it-works"></a>
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/aqeulFxqT1Y" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+
+            <!--#products-->
+            <section class="category product">
+                <a id="products"></a>
+                <div class="product-item" id="stationery">
+                    <h2>Stationery</h2>
+                    <p><img src="img/stationery.png" style="width:100%;height: 30%;"></p>
+                    <p>All office and school supplies. Along with supplies for hobbists</p>
+                    <p id="shop-now"><a href="#">Shop Now!</a></p>
+                </div>
+                <div class="product-item" id="toys">
+                    <h2>Toys</h2>
+                    <p><img src="img/toys.png" style="width: 100%;height: 30%;"></p>
+                    <p>Give your children the toys he or she will love and save the earth at the same time</p>
+                    <p id="shop-now"><a href="#">Shop Now!</a></p>
+                </div>
+                <div class="product-item" id="art">
+                    <h2>Home Decors</h2>
+                    <p><img src="img/home.png" style="width: 100%;height: 30%;"></p>
+                    <p>Make your home feel alive with the awesome decors that are 
+                        not just beatiful but healthy.
+                    </p>
+                    <p id="shop-now"><a href="#">Shop Now!</a></p>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <p>&copy;Green Corp</p>
+            <p>
+                <a href="#">About</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact Us</a>
+            </p>
+        </footer>
+
+        <!-- fcc tests -->
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+
+</html>

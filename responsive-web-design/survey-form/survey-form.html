@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--freecodecamp survey form-->
+    <title>Game Survey</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="survey-form.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1 id="title">Game Survey</h1>
+    <p id="description">
+        we want to make a game that you will love
+    </p>
+
+    <form id="survey-form">
+        <label id="name-label" for="name">Name:</label>
+        <input id="name" type="text" placeholder="Enter you name here" required>
+
+        <label id="email-label" for="email">Email:</label>
+        <input id="email" type="email" placeholder="Enter your email" required>
+
+        <label id="number-label" for="number">Number:</label>
+        <input id="number" type="number" placeholder="Enter your number" max="9999999999" min="1000000000" required>
+
+        <div id="gender">
+            <label for="male">
+                <input type="radio" id="male" name="gender" value="male"> Male
+            </label>
+            <label for="female">
+                <input type="radio" id="female" name="gender" value="female"> Female
+            </label>
+            <label for="non-bi">
+                <input type="radio" id="non-bi" name="gender" value="non-bi"> Non-Binary
+            </label>
+        </div>
+
+        <div id="checkbox">
+            What are your favourite game genres?
+            <label for="action">
+                <input type="checkbox" id="action" name="game-genre" value="action"> Action
+            </label>
+
+            <label for="adventure">
+                <input type="checkbox" id="adventure" name="game-genre" value="adventure"> Adventure
+            </label>
+
+            <label for="fps">
+                <input type="checkbox" id="fps" name="game-genre" value="fps"> First-Person Shooter
+            </label>
+
+            <label for="rpg">
+                <input type="checkbox" id="rpg" name="game-genre" value="rpg"> RPG
+            </label>
+
+            <label for="turn-based">
+                <input type="checkbox" id="turn-based" name="game-genre" value="turn-based"> Turn-Based Tactics
+            </label>
+
+            <label for="board">
+                <input type="checkbox" id="board" name="game-genre" value="board"> Board
+            </label>
+
+            <label for="interactive-novel">
+                <input type="checkbox" id="interactive-novel" name="game-genre" value="interactive-novel"> Interactive
+                Novel
+            </label>
+        </div>
+
+        <div id="pref">
+            <label for="dropdown">What do you look for in a game?</label>
+            <select name="feature" id="dropdown" style="max-width: 80%;">
+                <option value="multiplayer">Must be multiplayer</option>
+                <option value="accessible">Accessiblity in mind</option>
+                <option value="l-dalog">Less chit-chat (dialog) in the game</option>
+                <option value="plot">Interesting plot</option>
+                <option value="price">cost</option>
+                <option value="anything" selected>Not any specific preference(s)</option>
+            </select>
+        </div>
+
+        <div id="suggestion-box">
+            Additional comments:
+            <textarea placeholder="Type Here" style="width: 80%; height: 5em;"></textarea>
+        </div>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+
+    <!--fcc cdn for testing and validating-->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

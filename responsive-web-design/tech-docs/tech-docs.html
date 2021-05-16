@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Rohit Mehta">
+
+    <!--freecode camp technical documentation page-->
+    <title>C Documentation</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>C Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#What_you_should_already_know">What you should already know</a></li>
+            <li><a class="nav-link" href="#C_and_C++">C and C++</a></li>
+            <li><a class="nav-link" href="#Hello_world">Hello World</a></li>
+            <li><a class="nav-link" href="#Variables">Variables</a></li>
+            <li><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
+            <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+            <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
+            <li><a class="nav-link" href="#Constants">Constants</a></li>
+            <li><a class="nav-link" href="#Data_types">Data types</a></li>
+            <li><a class="nav-link" href="#if...else_statement">if...else statement</a></li>
+            <li><a class="nav-link" href="#while_statement">while statement</a></li>
+            <li><a class="nav-link" href="#Function_declaration">Function declaration</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <!-- at least 5 sections -->
+        <section id="Introduction" class="main-section">
+            <header>Introduction</header>
+            <article>
+                <p>
+                    C was invented and first implemented by Denis Ritchie on a DEC PDP-11 that used
+                    the Unix operating system. C is the result of a development process that started
+                    with an older language called BCPL. BCPL was developed by Martin Richards, and it
+                    influenced a language called B, which was invented by Ken Thompson. B led to
+                    the development of C in the 1970s.
+                </p>
+                <p>
+                    C is often called a <em>middle-level</em> computer language. This is because it
+                    combines the best elements of high-level languages with the control and
+                    flexibility of assembly language. As a middle-level language, C allows the manipulation
+                    of bits, bytes, and addresses--the basic elements with which the computer functions.
+                </p>
+                <p>
+                    C is a compiled language. This means the raw C code first must be converted into raw
+                    intructions, i.e. the <em>machine code</em>, before it can be run by the computer.
+                    A general build process is like this:
+                <ul>
+                    <li>A compiler reads the entire C program and converts it into <em>object code</em></li>
+                    <li>Then, a linker takes this object code and links it with its dependencies (standard library and
+                        other
+                        user-defined functions) to create a final <em>executable file</em>.
+                    </li>
+                </ul>
+                </p>
+            </article>
+        </section>
+        <section id="What_you_should_already_know" class="main-section">
+            <header>What you should already know</header>
+            <article>
+                <p>
+                    This guide assumes that you have the following basic background:
+                    <ul>
+                        <li>a basic understanding of computer</li>
+                        <li>know how to use a text editor</li>
+                        <li>woring understanding with comman-line interface</li>
+                    </ul>
+                </p>
+            </article>
+        </section>
+        <section id="C_and_C++" class="main-section">
+            <header>C and C++</header>
+            <article>
+                <p>
+                    Many people confuse the C with C++. Originally, C++ was build on top of C 
+                    and added my features to the C language by Bjarne Stroupe. One of the most 
+                    notable feature was support for Obejct-Oreintation with the class keyword. 
+                    For this reason, C++ was initially called as the "C with classes".
+                </p>
+                <p>
+                    However, mordern C++ and C are completely different languages in many respects. 
+                    C++ is still backward compatible with C (C89 standard), the new c++14 and above is 
+                    now mostly used which can feel like a completely different programming language to 
+                    a C veteran.
+                </p>
+                <p>
+                    C was designed Originally for system programming, and its simplicity and strength made 
+                    it suitable for almost anything. On the other hand, was designed to provide C with <em>Object-Orientation</em> 
+                    support. C is much simple and light weight language as compared to C++.
+                </p>
+                <p>
+                    It would be more helpful to think of them as very closely related languages, but different.
+                </p>
+            </article>
+        </section>
+        <section id="Hello_world" class="main-section">
+            <header>Hello world</header>
+            <article>
+                To get started with C, open any text editor and write your first code:
+                <pre>
+<code class="block">
+    #include &lt;stdio.h&gt;
+    
+    int main() 
+    {
+        printf("Hello, world\n");
+        
+        return 0;
+    }
+</code>
+                </pre>
+                Now, save it as <code>hello.c</code>. Open the terminal, and compile and run:
+                <pre>
+<code class="block">
+    $ gcc -o hello hello.c
+    $ ./hello
+    Hello, world
+    $
+</code>
+                </pre>
+            </article>
+        </section>
+        <section id="Variables" class="main-section">
+            <header>Variables</header>
+            <article>
+                <p>
+                    A <em>variable</em> is a named location in memory that is used
+                    to hold a value that can be modified by the program. That is,
+                    a variable is a human-readable form of physical computer address.
+                    The names of variables is called <em>identifier</em>---which are
+                    completely used-defined.
+                </p>
+                <p>
+                    The length of these identifiers can vary from one to several characters.
+                    The first character must be a letter or an underscore, and subsequent
+                    characters must be either letters, digits or underscores. Here are some examples:
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Correct</th>
+                                <th>Incorrect</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>count</td>
+                                <td>1count</td>
+                            </tr>
+                            <tr>
+                                <td>test23</td>
+                                <td>hi!there</td>
+                            </tr>
+                            <tr>
+                                <td>high_balance</td>
+                                <td>high...balance</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+            </article>
+        </section>
+        <section id="Declaring_variables" class="main-section">
+            <header>Declaring variables</header>
+            <article>
+                <p>
+                    In C, all variables must be declare before they
+                    can be used. The general form of a declaration is
+                    <pre><code class="block">   <em>type variable_list</em>;</code></pre>
+                    Here, <em>type</em> must be a valid data type plus any modifier,
+                    and <em>variable_list</em> may consist of one or more identifier names
+                    separated by commas. Here are some declarations:
+                    <pre>
+<code class="block">
+    int i, j, l;
+    short int si;
+    unsigned int ui;
+    double balance, profit, loss;
+</code>
+                    </pre>
+                </p>
+                <p>Remember, in C the name of a variable has nothig to do with its type.</p>
+            </article>
+        </section>
+        <section id="Variable_scope" class="main-section">
+            <header>Variable scope</header>
+            <article>
+                <p>
+                    When you declare a variable outside of any function, it is called a global variable,
+                    because it is available to any other code in the current document. When you declare a
+                    variable within a function, it is called a local variable, because it is available only within that function. 
+                </p>
+                <p>
+                    Variables delared in local scope are not accessible outside that function.
+                    <pre>
+<code class="block">
+    void func1(void)
+    {
+        int x = 10;
+    }
+
+    /* this will produce an error,
+     * because no variable
+     * x exist in this scope */
+    printf("%d", x);
+</code>
+                    </pre>
+                </p>
+            </article>
+        </section>
+        <section id="Global_variables" class="main-section">
+            <header>Global variables</header>
+            <article>
+                <p>
+                    Unlike local variables, <em>global variables</em> are known
+                    thoughout the program and may be used by any piece of code.
+                    Also, they will hold their value thoughout the program's execution.
+                </p>
+                <p>
+                    To declare global variable, declare variables outside of any logical block, ie outside of function,
+                    while, for, etc.
+                </p>
+            </article>
+        </section>
+        <section id="Constants" class="main-section">
+            <header>Constants</header>
+            <article>
+                <p>
+                    <em>Constants</em> refer to fixed values that the program
+                    may not alter. Unlike normal variables, constants are read-only variables.
+                    And therefore, their value cannot be changed after their definition. A
+                    constant variable can have any data type.
+                </p>
+                <p>
+                    You can create constant variables by using <code>cosnt</code> keyword.
+                    <pre>
+<code class="block">
+    const double PI = 3.14156;
+</code>
+                    </pre>
+                    By convention, constant types are named with all uppercase letters.
+                </p>
+            </article>
+        </section>
+        <section id="Data_types" class="main-section">
+            <header>Data types</header>
+            <article>
+                <p>
+                    C89 defines five foundational data types:
+                    <ul>
+                        <li>character ---- declared using <strong>char</strong> keyword</li>
+                        <li>integer ---- declared using <strong>int</strong> keyword</li>
+                        <li>floating-point ---- declared using <strong>float</strong> keyword</li>
+                        <li>double floating-point ---- declared using <strong>double</strong> keyword</li>
+                        <li>valueless ---- declare using <strong>void</strong> keyword</li>
+                    </ul>
+                </p>
+                <p>
+                    <i>C99 adds three more: <strong>_Bool</strong>, <strong>_Complex</strong>, <strong>_Imaginary</strong>.</i>
+                </p>
+            </article>
+        </section>
+        <section id="if...else_statement" class="main-section">
+            <header>if...else statement</header>
+            <article>
+                <p>
+                    You can use if...else statements to program logical execution that will be executed
+                    only if some certain condition(s) are met. Syntax:
+                    <pre>
+<code class="block">
+    if (condition)
+    {
+    statement(s)
+    }
+    else
+    {
+        statement(s)
+    }
+</code>
+                    </pre>
+                    if condition evaluates to true, the first statements will be executed, otherwise
+                    on false, second statements are executed.
+                </p>
+                <p>
+                    You can have multiple branches which each execute when a certain condition is met using
+                    if...else if...else statement.
+                    <pre>
+<code class="block">
+    if (condition)
+    {
+    statement(s)
+    }
+    else if (condition)
+    {
+        statement(s)
+    }
+    /* any number of else if */
+    else
+    {
+        statement(s)
+    }
+</code>
+                    </pre>
+                    The trailing else block is executed if all of the conditions evalutes to false.
+                </p>
+            </article>
+        </section>
+        <section id="while_statement" class="main-section">
+            <header>while statement</header>
+            <article>
+                <p>
+                    A while statement executes its statements as long as a specified condition evaluates to true. Syntax:
+                    <pre>
+ <code class="block">
+    while (condition)
+    {
+        statement(s)
+    }
+</code>
+                    </pre>
+                    If the condition evaluates to false then the execution of the while loop stops, and the control
+                    flow passes to the statement following the while loop.
+                </p>
+                <p>
+                    An example to print first 20 integers on the screen:
+                    <pre>
+<code class="block">
+    int i = 0;
+    while (i < 20)
+    {
+        printf("%d\n", i+1);
+        i++;
+    }
+</code>
+                    </pre>
+                    With each iteration the loop increments the i adding 1 to it. When i = 20, the mentioned condition
+                    evaluates to false and the loop stops.
+                </p>
+            </article>
+        </section>
+        <section id="Function_declaration" class="main-section">
+            <header>Function declaration</header>
+            <article>
+                <p>
+                    The general form of a function is
+                    <pre>
+<code class="block">
+ ret-type function-name (parameter list)
+ {
+   body of the function
+ }
+</code>
+                    </pre>
+                    <ul>
+                        <li><em>ret-type</em> specifies the type of data that the function returns</li>
+                        <li><em>parameter list</em>(optional) is a comma-separated list of variable names and theier assosiated types
+                            that are passed to the body of the funtion when the function is invoked</li>
+                        <li><em>function body</em> contains all the statement that the function will execute on invocation</li>
+                    </ul>
+                </p>
+                <p>
+                    A function to return a square of number:
+                    <pre>
+<code class="block">
+    double square (double n)
+    {
+        return n * n;
+    }
+</code>
+                    </pre>
+                </p>
+            </article>
+        </section>
+        <section id="Reference" class="main-section">
+            <header>Reference</header>
+            <article>
+                <a href="https://www.mheducation.co.in/c-the-complete-reference-9780070411838-india#tab-label-product-description-title">C: The Complete Reference</a> by Herbert Schildt.
+            </article>
+        </section>
+    </main>
+    <div id="mobile-nav"><a href="#navbar">Index</a></div>
+    <!--fcc testing bundle-->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
